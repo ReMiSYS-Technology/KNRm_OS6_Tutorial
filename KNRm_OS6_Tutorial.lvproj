@@ -131,6 +131,7 @@ AddOutputFilter chunkFilter
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
 		<Item Name="1motorPwmTest.vi" Type="VI" URL="../1motorPwmTest.vi"/>
 		<Item Name="3motorDriveTest.vi" Type="VI" URL="../3motorDriveTest.vi"/>
+		<Item Name="Demo.vi" Type="VI" URL="../Demo.vi"/>
 		<Item Name="Keyboard.lvlib" Type="Library" URL="../Keyboard.lvlib"/>
 		<Item Name="KNRm_ReMi_OS6.lvlibp" Type="LVLibp" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp">
 			<Item Name="Action" Type="Folder">
@@ -204,6 +205,7 @@ AddOutputFilter chunkFilter
 				<Item Name="KNRmClose.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/System/KNRmClose.vi"/>
 				<Item Name="KNRmLED.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/System/LowLevel/KNRmLED.vi"/>
 				<Item Name="KNRmSmartOpen.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/System/LowLevel/KNRmSmartOpen.vi"/>
+				<Item Name="ReMiSYS_Open(SubVI).vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/System/ReMiSYS_Open(SubVI).vi"/>
 			</Item>
 			<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/Utility/error.llb/Error Cluster From Error Code.vi"/>
 			<Item Name="I2C.lvlib" Type="Library" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/myRIO/Instrument Drivers/Onboard IO/I2C/I2C.lvlib"/>
@@ -222,7 +224,7 @@ AddOutputFilter chunkFilter
 			<Item Name="niLvFpgaErrorClusterFromErrorCode.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/rvi/errors/niLvFpgaErrorClusterFromErrorCode.vi"/>
 			<Item Name="niLvFpgaFormatErrorSource.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/rvi/errors/niLvFpgaFormatErrorSource.vi"/>
 			<Item Name="niLvFpgaWhatHappensToTopLevelVI.ctl" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/rvi/errors/niLvFpgaWhatHappensToTopLevelVI.ctl"/>
-			<Item Name="nirio_resource_hc.ctl" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/userdefined/High Color/nirio_resource_hc.ctl"/>
+			<Item Name="nirio_resource_hc.ctl" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/userDefined/High Color/nirio_resource_hc.ctl"/>
 			<Item Name="nirviErrorClusterFromErrorCode.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/RVI Host/nirviSupport.llb/nirviErrorClusterFromErrorCode.vi"/>
 			<Item Name="nirviWhatTheDeviceIsDoing.ctl" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/rvi/ClientSDK/nirviWhatTheDeviceIsDoing.ctl"/>
 			<Item Name="subTimeDelay.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/express/express execution control/TimeDelayBlock.llb/subTimeDelay.vi"/>
@@ -322,6 +324,9 @@ AddOutputFilter chunkFilter
 			<Item Name="KNRmFPGAOS5_1K.lvbitx" Type="Document" URL="../../KNRm_ReMi_OS6/KNRm_ReMi_Toolkit/System/LowLevel/Bitfile/KNRmFPGAOS5_1K.lvbitx"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="rioembeddedcanlvapi.dll" Type="Document" URL="rioembeddedcanlvapi.dll">
