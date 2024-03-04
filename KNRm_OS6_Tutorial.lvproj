@@ -59,6 +59,7 @@
 		<Property Name="host.ResponsivenessCheckPingTimeout" Type="UInt">1000</Property>
 		<Property Name="host.TargetCPUID" Type="UInt">8</Property>
 		<Property Name="host.TargetOSID" Type="UInt">8</Property>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="target.cleanupVisa" Type="Bool">false</Property>
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
@@ -130,9 +131,8 @@ AddOutputFilter chunkFilter
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
 		<Item Name="1motorPwmTest.vi" Type="VI" URL="../1motorPwmTest.vi"/>
-		<Item Name="3motorDriveTest.vi" Type="VI" URL="../3motorDriveTest.vi"/>
-		<Item Name="Demo.vi" Type="VI" URL="../Demo.vi"/>
 		<Item Name="Keyboard.lvlib" Type="Library" URL="../Keyboard.lvlib"/>
+		<Item Name="3motorDriveTest.vi" Type="VI" URL="../3motorDriveTest.vi"/>
 		<Item Name="KNRm_ReMi_OS6.lvlibp" Type="LVLibp" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp">
 			<Item Name="Action" Type="Folder">
 				<Item Name="GyroCalibrate.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Action/GyroCalibrate.vi"/>
@@ -185,22 +185,22 @@ AddOutputFilter chunkFilter
 				<Item Name="read1Encoder.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/MotorControl/read1Encoder.vi"/>
 				<Item Name="read4Encoders.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/MotorControl/read4Encoders.vi"/>
 			</Item>
-			<Item Name="Sensor" Type="Folder">
-				<Item Name="LowLevel" Type="Folder">
-					<Item Name="ReadAI (Array).vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/LowLevel/ReadAI (Array).vi"/>
-					<Item Name="ReadAI (Single).vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/LowLevel/ReadAI (Single).vi"/>
-				</Item>
-				<Item Name="KNRm_i2CLib.lvlib" Type="Library" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/BNO055_KNRmLvlib/KNRm_i2CLib.lvlib"/>
-				<Item Name="BNO055_KNRm_ReMi.lvlib" Type="Library" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/BNO055_KNRm_ReMi.lvlib"/>
-				<Item Name="LimitBtn.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/LimitBtn.vi"/>
-				<Item Name="ReadBattery.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadBattery.vi"/>
-				<Item Name="ReadEncoder.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadEncoder.vi"/>
-				<Item Name="ReadIR.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadIR.vi"/>
-				<Item Name="ReadQTR.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadQTR.vi"/>
-				<Item Name="ReadUltrasonic.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadUltrasonic.vi"/>
-				<Item Name="ReMiPSP.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReMiPSP.vi"/>
-			</Item>
 			<Item Name="System" Type="Folder">
+				<Item Name="Sensor" Type="Folder">
+					<Item Name="LowLevel" Type="Folder">
+						<Item Name="ReadAI (Array).vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/LowLevel/ReadAI (Array).vi"/>
+						<Item Name="ReadAI (Single).vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/LowLevel/ReadAI (Single).vi"/>
+					</Item>
+					<Item Name="KNRm_i2CLib.lvlib" Type="Library" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/BNO055_KNRmLvlib/KNRm_i2CLib.lvlib"/>
+					<Item Name="BNO055_KNRm_ReMi.lvlib" Type="Library" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/BNO055_KNRm_ReMi.lvlib"/>
+					<Item Name="LimitBtn.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/LimitBtn.vi"/>
+					<Item Name="ReadBattery.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadBattery.vi"/>
+					<Item Name="ReadEncoder.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadEncoder.vi"/>
+					<Item Name="ReadIR.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadIR.vi"/>
+					<Item Name="ReadQTR.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadQTR.vi"/>
+					<Item Name="ReadUltrasonic.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReadUltrasonic.vi"/>
+					<Item Name="ReMiPSP.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/Sensor/ReMiPSP.vi"/>
+				</Item>
 				<Item Name="KNRmBtn.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/System/LowLevel/KNRmBtn.vi"/>
 				<Item Name="KNRmClose.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/System/KNRmClose.vi"/>
 				<Item Name="KNRmLED.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/System/LowLevel/KNRmLED.vi"/>
@@ -228,11 +228,11 @@ AddOutputFilter chunkFilter
 			<Item Name="nirviErrorClusterFromErrorCode.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/RVI Host/nirviSupport.llb/nirviErrorClusterFromErrorCode.vi"/>
 			<Item Name="nirviWhatTheDeviceIsDoing.ctl" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/rvi/ClientSDK/nirviWhatTheDeviceIsDoing.ctl"/>
 			<Item Name="subTimeDelay.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/express/express execution control/TimeDelayBlock.llb/subTimeDelay.vi"/>
-			<Item Name="SystemDrive4thPWM.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/KNRm_ReMi_Toolkit/MotorControl/SystemDrive4thPWM.vi"/>
 			<Item Name="Trim Whitespace.vi" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/Utility/error.llb/Trim Whitespace.vi"/>
 			<Item Name="whitespace.ctl" Type="VI" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/Utility/error.llb/whitespace.ctl"/>
 			<Item Name="XDNodeRunTimeDep.lvlib" Type="Library" URL="../../builds/KNRm_ReMi_Toolkit/KNRm/KNRm_ReMi_OS6/home/lvuser/natinst/bin/KNRm_ReMi_OS6.lvlibp/1abvi3w/vi.lib/Platform/TimedLoop/XDataNode/XDNodeRunTimeDep.lvlib"/>
 		</Item>
+		<Item Name="Demo.vi" Type="VI" URL="../Demo.vi"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
